@@ -69,4 +69,10 @@ class Etiquette
 
         return $this;
     }
+
+    // Récupère le name pour l'ajout de field dans le dashboard
+    public function __toString(): string
+    {
+        return $this->name;
+    }
 }

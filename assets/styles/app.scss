@@ -1,7 +1,22 @@
-//start coding by removing this file and adding yours ;)
-@import "wcs";
+// Variables
+@import "variables.scss";
+// Global
+@import "global.scss";
+// Accueil
+@import "accueil.scss";
+// Connexion - Login
+@import "login.scss";
+// Projets
+@import "projets.scss";
+// Contact
+@import "contact.scss";
 // Font Awesome
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
+// 2. Import default variables and available mixins.
+@import "uikit/src/scss/variables-theme.scss";
+@import "uikit/src/scss/mixins-theme.scss";
+// 4. Import UIkit.
+@import "uikit/src/scss/uikit-theme.scss";

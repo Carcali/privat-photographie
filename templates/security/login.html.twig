@@ -1,31 +1,43 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="{{ asset('build/images/logo-wild-code-school.svg') }}"/>
+        <title>
+            {% block title %}Connexion{% endblock %}
+        </title>
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
 
-{% block title %}Log in!{% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+<section class="section-fullwidth_privat">
+    <img src="{{ asset('build/images/logo-privat-beige.svg') }}" id="logo-beige" class="logo-menu uk-position-large uk-position-top-center">
+    <form method="post" class="form_login-privat uk-position-center">
+        {% if error %}
+            <div class="inscription_login-privat uk-position-bottom-center">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-        </div>
-    {% endif %}
+        {% if app.user %}
+            <div class="">
+                Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Se déconnecter</a>
+            </div>
+        {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
+        <h1 class="titre_login-privat uk-text-center uk-text-uppercase uk-margin-medium-bottom">Connexion</h1>
+        <label for="inputEmail" class="label_login-privat uk-margin-small-bottom">Email</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="input_login-privat uk-margin-small-bottom" autocomplete="email" required autofocus>
+        <label for="inputPassword" class="label_login-privat uk-margin-small-bottom">Mot de passe</label>
+        <input type="password" name="password" id="inputPassword" class="input_login-privat uk-margin-large-bottom" autocomplete="current-password" required>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        <button class="button_login-privat uk-text-uppercase uk-text-decoration-none uk-margin-top-medium" type="submit">Se connecter</button>
+    </form>
+</section>
 {% endblock %}

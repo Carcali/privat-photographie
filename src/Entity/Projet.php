@@ -27,6 +27,15 @@ class Projet
     #[ORM\ManyToMany(targetEntity: Etiquette::class, inversedBy: 'projets')]
     private Collection $etiquette;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $photo1 = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $photo2 = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $photo3 = null;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
@@ -43,7 +52,7 @@ class Projet
         return $this->name;
     }
 
-    public function setName(string $name): static
+    public function setName(?string $name): static
     {
         $this->name = $name;
 
@@ -106,6 +115,42 @@ class Projet
     public function removeEtiquette(Etiquette $etiquette): static
     {
         $this->etiquette->removeElement($etiquette);
+
+        return $this;
+    }
+
+    public function getPhoto1(): ?string
+    {
+        return $this->photo1;
+    }
+
+    public function setPhoto1(?string $photo1): static
+    {
+        $this->photo1 = $photo1;
+
+        return $this;
+    }
+
+    public function getPhoto2(): ?string
+    {
+        return $this->photo2;
+    }
+
+    public function setPhoto2(?string $photo2): static
+    {
+        $this->photo2 = $photo2;
+
+        return $this;
+    }
+
+    public function getPhoto3(): ?string
+    {
+        return $this->photo3;
+    }
+
+    public function setPhoto3(?string $photo3): static
+    {
+        $this->photo3 = $photo3;
 
         return $this;
     }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="{{ asset('build/images/logo-wild-code-school.svg') }}"/>
+        <title>
+            {% block title %}Accueil{% endblock %}
+        </title>
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="uk-flex uk-flex-center">
+            <nav class="nav_privat">
+                <a class="button-menu uk-text-uppercase uk-text-decoration-none uk-position-large uk-position-top-left" href="#modal-full" uk-toggle>Menu</a>
+                <img src="{{ asset('build/images/logo-privat-beige.svg') }}" id="logo-beige" class="logo-menu uk-position-large uk-position-top-center">
+                {# <img src="{{ asset('build/images/logo-privat-noir.svg') }}" id="logo-noir" class="logo-menu"> #}
+                {# Darkmode toggle #}
+                    <div class="toggleContainer uk-position-large uk-position-top-right">
+                        <input id="checkbox" type = "checkbox" value = "off">
+                    </div>
+                {# Fin du darkmode #}
+            </nav>
+            {# Modal #}
+            <div id="modal-full" class="uk-modal-full" uk-modal>
+                <div class="menu-fullwidth_privat uk-modal-dialog">
+                    <div class="uk-flex uk-flex-center">
+                        <img src="{{ asset('build/images/logo-privat-beige.svg') }}" id="logo-beige" class="logo-modal_privat uk-position-large uk-position-top-center">
+                        <div class="nav-modal_privat">
+                            <button class="close-modal_privat uk-text-uppercase uk-text-decoration-none uk-modal-close-full uk-text-center uk-position-large uk-position-top-left" uk-close>Fermer</button>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="div-liens-menu_privat" uk-height-viewport>
+                            <a href="{{ path('accueil') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Accueil</a>
+                            <a href="{{ path('projets') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Projets</a>
+                            <a href="{{ path('a-propos') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">À propos</a>
+                            <a href="{{ path('contact') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Contact</a>
+                        </div>
+                    </div>
+            </div>
+            {# Fin du modal #}
+        </header>
+        {% block body %}
+        <section class="section-fullwidth_privat">
+            <h1 class="titre-page_privat uk-text-center uk-text-uppercase uk-position-center">Accueil</h1>
+            <img src="{{ asset('build/images/accueil/toulon-2022-chapelle-notre-dame-du-cap-falcon-privat-photographie-1.jpg')}}" class="section-img_privat uk-position-center">
+        </section>
+        <section>
+            <div class="uk-flex uk-flex-center uk-flex-middle">
+                <div class="div-description-accueil_privat">
+                    <h4 class="titre-description_accueil-privat uk-text-center">Carnet de bord</h4>
+                    <p class="texte-description-accueil_privat uk-text-center">Sed facilisis tincidunt leo ut ornare. Phasellus vestibulum sapien nec enim fermentum, ut elementum leo aliquet. Ut ultricies orci ut nisl pellentesque placerat. Aenean ac augue sit amet mauris pulvinar finibus et nec odio. Ut et risus vel lectus bibendum vestibulum. Maecenas orci enim, auctor nec sodales sed, luctus id ligula.</p>
+                </div>
+            </div>
+                <div class="uk-container uk-container-small">
+                    <div class="uk-grid-small" uk-grid>
+                        <img src="{{ asset('build/images/contact-cafe-privat-photographie.jpg')}}" class="uk-width-1-3">
+                        <img src="{{ asset('build/images/lampe-privat-photographie.jpg')}}" class="uk-width-1-3">
+                        <img src="{{ asset('build/images/fenetre-privat-photographie.jpg')}}" class="uk-width-1-3">
+                    </div>
+                </div>
+        </section>
+        <section class="section-image-fullwidth_accueil-privat">
+            <h4 class="titre-description_accueil-privat uk-text-center uk-margin-large-bottom">Les derniers voyages</h4>
+            <div style="background-image: url('{{ asset('build/images/accueil/toulon-2022-chapelle-accueil-privat.jpg') }}')" class="image-fullwidth_accueil-privat uk-flex uk-flex-center">
+                <h4 class="nom-image-fullwidth_accueil-privat uk-text-center">Toulon</h4>
+                <h2 class="date-image-fullwidth_accueil-privat uk-text-center uk-text-uppercase">Septembre 2022</h2>
+            <div>
+        </section>
+        <footer class="footer-privat">
+            <p class="mail_footer-privat">contact@julien-privat.com</p>
+            <div class="social_footer-privat uk-margin-medium-top">
+                <a href="https://julien-privat.com/" class="lien-social_footer-privat uk-text-uppercase">Graphisme</a>
+                <a href="www.linkedin.com/in/julien-privat-7a4990203" class="lien-social_footer-privat uk-text-uppercase">Instagram</a>
+            </div>
+        </footer>
+        {% endblock %}
+    <script>
+        const checkbox = document.querySelector("#checkbox");
+        const mainBody = document.querySelector("body");
+        checkbox.addEventListener("click", () => mainBody.classList.toggle("darkBg"));
+    </script>
+    </body>
+</html>

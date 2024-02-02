@@ -1,0 +1,48 @@
+.titre_login-privat {
+    color: $beige;
+    font-family: "Millionaire-Roman";
+    font-size: $h2-size;
+}
+
+.form_login-privat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inscription_login-privat {
+    position: absolute;
+    bottom: 0;
+    color: $beige;
+}
+
+.input_login-privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    background-color: transparent;
+    padding: 3%;
+    border: 1px solid $beige;
+}
+
+.label_login-privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+}
+
+.button_login-privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    font-size: $h5-size;
+    background-color: transparent;
+    text-decoration: none;
+    border: 2px solid $beige;
+    border-radius: 0.75rem;
+    padding: 1.5vh 2vw 1vh 2vw;
+    width: auto;
+
+    &:hover {
+        color: $rouge;
+
+        border: 2px solid $rouge;
+    }
+}

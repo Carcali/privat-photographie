@@ -1,0 +1,30 @@
+// Couleurs
+$noir: #000000;
+$beige: #F7EFE7;
+$rouge: #FF0000;
+// Textes
+$h1-size: 10rem;
+$h2-size: 3.75rem;
+$h3-size: 3rem;
+$h4-size: 2.25rem;
+$h5-size: 1.5rem;
+$p-size: 1rem;
+$btn-size: 1.25rem;
+
+// Millionaire Roman
+@font-face {
+    font-family: "Millionaire-Roman";
+    src: url(../fonts/Millionaire-Roman.woff2) format("woff2"), url(../fonts/Millionaire-Roman.woff2) format("woff2");
+}
+
+// Millionaire Script
+@font-face {
+    font-family: "Millionaire-Script";
+    src: url(../fonts/Millionaire-Script.woff2) format("woff2"), url(../fonts/Millionaire-Script.woff2) format("woff2");
+}
+
+// Millionaire Italic
+@font-face {
+    font-family: "Millionaire-Italic";
+    src: url(../fonts/Millionaire-Italic.woff2) format("woff2"), url(../fonts/Millionaire-Italic.woff2) format("woff2");
+}
