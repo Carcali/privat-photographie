@@ -1,0 +1,97 @@
+.nav_privat {
+    position: fixed;
+    width: 80%;
+    z-index: 99 !important;
+}
+
+.nav-modal_privat {
+    position: fixed;
+    width: 80%;
+    z-index: 9999 !important;
+}
+
+.section-fullwidth_privat {
+    width: 100%;
+    height: 100dvh;
+}
+
+.titre-page_privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    font-size: $h1-size;
+    mix-blend-mode: screen;
+    z-index: 90;
+}
+
+.section-img_privat {
+    height: 60vh;
+    width: auto;
+}
+
+.div-description-accueil_privat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    width: 30%;
+}
+
+.div-description-accueil_privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    padding-top: 5vh;
+    padding-bottom: 7vh;
+    width: 30%;
+    height: auto;
+}
+
+.titre-description_accueil-privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    font-size: $h4-size;
+}
+
+.texte-description_accueil-privat {
+    color: $beige;
+    font-size: $p-size;
+}
+
+.images3_privat {
+    width: 60%;
+}
+
+/* Section image fullwidth des derniers voyages */
+
+.section-image-fullwidth_accueil-privat {
+    margin-top: 10vh;
+}
+
+.titre-derniers-voyages_privat {
+    color: $rouge;
+}
+
+.image-fullwidth_accueil-privat {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.nom-image-fullwidth_accueil-privat {
+    font-family: "Millionaire-Script";
+    color: $rouge;
+    font-size: $h4-size;
+    position: absolute;
+    top: 2vh;
+}
+
+.date-image-fullwidth_accueil-privat {
+    font-family: "Millionaire-Roman";
+    color: $rouge;
+    font-size: 10rem;
+    position: absolute;
+    bottom: 2vh;
+}

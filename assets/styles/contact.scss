@@ -1,0 +1,32 @@
+.form_contact-privat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+}
+
+.div-description-contact_privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    padding-top: 5vh;
+    padding-bottom: 7vh;
+    width: auto;
+    height: auto;
+}
+
+.input_contact-privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    font-size: $btn-size;
+    background-color: transparent;
+    padding: 3%;
+    border: 1px solid $beige;
+    width: 100%;
+    margin-bottom: 3vh;
+}
+
+.label_contact-privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    font-size: $btn-size;
+}

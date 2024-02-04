@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="{{ asset('build/images/logo-wild-code-school.svg') }}"/>
+        <title>
+            {% block title %}À propos{% endblock %}
+        </title>
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="uk-flex uk-flex-center">
+            <nav class="nav_privat">
+                <a class="button-menu uk-text-uppercase uk-text-decoration-none uk-position-large uk-position-top-left" href="#modal-full" uk-toggle>Menu</a>
+                <img src="{{ asset('build/images/logo-privat-beige.svg') }}" id="logo-beige" class="logo-menu uk-position-large uk-position-top-center">
+                {# <img src="{{ asset('build/images/logo-privat-noir.svg') }}" id="logo-noir" class="logo-menu"> #}
+                {# Darkmode toggle #}
+                    <div class="toggleContainer uk-position-large uk-position-top-right">
+                        <input id="checkbox" type = "checkbox" value = "off">
+                    </div>
+                {# Fin du darkmode #}
+            </nav>
+            {# Modal #}
+            <div id="modal-full" class="uk-modal-full" uk-modal>
+                <div class="menu-fullwidth_privat uk-modal-dialog">
+                    <div class="uk-flex uk-flex-center">
+                        <img src="{{ asset('build/images/logo-privat-beige.svg') }}" id="logo-beige" class="logo-modal_privat uk-position-large uk-position-top-center">
+                        <div class="nav-modal_privat">
+                            <button class="close-modal_privat uk-text-uppercase uk-text-decoration-none uk-modal-close-full uk-text-center uk-position-large uk-position-top-left" uk-close>Fermer</button>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="div-liens-menu_privat" uk-height-viewport>
+                            <a href="{{ path('accueil') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Accueil</a>
+                            <a href="{{ path('projets') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Projets</a>
+                            <a href="{{ path('a-propos') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">À propos</a>
+                            <a href="{{ path('contact') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Contact</a>
+                        </div>
+                    </div>
+            </div>
+            {# Fin du modal #}
+        </header>
+        {% block body %}
+        <section class="section-fullwidth_privat">
+            <h1 class="titre-page_privat uk-text-center uk-text-uppercase uk-position-center">À propos</h1>
+            <img src="{{ asset('build/images/accueil/a-propos-julien-privat-photographie.jpg')}}" class="section-img_privat uk-position-center">
+        </section>
+        <section>
+            <div class="uk-flex uk-flex-center uk-flex-middle">
+                <div class="div-description-accueil_privat">
+                    <h4 class="titre-description_accueil-privat uk-text-center">Bonne question ?</h4>
+                    <p class="texte-description-accueil_privat uk-text-center">Je suis pas encore sûre de savoir ce que je fou ici, quoiqu’il en soit les infos de base à connaître sur moi.</p>
+                    <p class="uk-margin-small-bottom uk-text-center">Graphiste de formation, passionné de photographie. Je voulais partager mes photographies hors du cadre professionnel, une approche plus personnelle sans limite de sujets, de temps, d’influences… J’y compile mes voyages et des moments de vie que j’ai pu capturer.</p>
+                </div>
+            </div>
+        </section>
+        {# Footer #}
+        <footer class="footer-privat">
+            <p class="mail_footer-privat">contact@julien-privat.com</p>
+            <div class="social_footer-privat uk-margin-medium-top">
+                <a href="https://julien-privat.com/" class="lien-social_footer-privat uk-text-uppercase">Graphisme</a>
+                <a href="www.linkedin.com/in/julien-privat-7a4990203" class="lien-social_footer-privat uk-text-uppercase">Instagram</a>
+            </div>
+        </footer>
+        {% endblock %}
+    <script>
+        const checkbox = document.querySelector("#checkbox");
+        const mainBody = document.querySelector("body");
+        checkbox.addEventListener("click", () => mainBody.classList.toggle("darkBg"));
+    </script>
+    </body>
+</html>
