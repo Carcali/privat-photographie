@@ -22,7 +22,8 @@ Mon choix s'est orienté sur un portfolio lié à ma passion pour la photographi
 
 ## Le modèle de la BDD
 
-![Base de données](https://github.com/Carcali/privat-photographie/assets/144898664/9a7e76e7-de41-427c-a206-ac2a34bfaf2d)
+![Base de données](https://github.com/Carcali/privat-photographie/assets/144898664/315dbbe8-5592-4ba5-a577-d0fff4307ae5)
+
 
 L'idée était de créer une partie visible de tous ainsi qu'une partie dashboard, allégée et simple d'utilisation me permettant d'alimenter rapidement des projets qui pourraient évoluer par la suite en se voyant attribuer des étiquettes ou bien être incluent dans des catégories plus larges. L'architecture est simple : une page de connexion pour arriver au dashboard, accessible uniquement en tant qu'administrateur. En parallèle 4 pages principales regroupant la page d'accueil, une vue d'ensemble des projets, un à propos ainsi qu'une page de contact. Il y a aussi une page projet type cliquable donnant le détails et d'autres images d'un projet spécifique.
 
