@@ -3,3 +3,38 @@
     font-family: "Millionaire-Roman";
     font-size: 6rem;
 }
+
+.date-image-fullwidth_projets-privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    font-size: 10rem;
+    margin-bottom: 2vh;
+    height: auto;
+
+    &:hover {
+        color: $rouge;
+        transition: color, ease-in-out 800ms;
+    }
+}
+
+.image-fullwidth_projets-privat {
+    width: 100%;
+}
+
+.legend_projet-privat {
+    font-family: "Millionaire-Roman";
+    color: $beige;
+    font-size: $p-size;
+}
+
+.endroit-heure_projets-privat {
+    font-family: "Millionaire-Italic";
+    color: $beige;
+    font-size: $btn-size;
+}
+
+.mots-cles_projets-privat {
+    font-family: "Millionaire-Italic";
+    color: $beige;
+    font-size: $h5-size;
+}

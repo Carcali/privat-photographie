@@ -41,14 +41,39 @@ body {
 }
 
 .button-close_privat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: "Millionaire-Roman" !important;
+    color: $beige !important;
+    font-size: $h5-size !important;
+    padding: 1vh 2vw 0.4vh 2vw !important;
+    border: 2px solid $beige !important;
+    border-radius: 0.75rem !important;
+    height: auto !important;
+    min-height: 5vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     background-color: $noir !important;
+    text-align: center !important;
+
+    &:hover {
+        color: $rouge !important;
+        border: 2px solid $rouge !important;
+        padding: 1vh 2vw 0.4vh 2vw !important;
+    }
+}
+
+.uk-icon {
+
+    svg {
+        display: none !important;
+    }
 }
 
 .menu-fullwidth_privat {
     background-color: $noir !important;
+    height: 100vh !important;
+    width: 100%;
 }
 
 .close-modal_privat {
@@ -96,6 +121,7 @@ body {
     color: $beige;
     font-size: $h2-size;
     line-height: 12vh;
+    z-index: 9999;
 
     &:hover {
         color: $rouge;
@@ -237,7 +263,15 @@ body {
 .darkBg {
 
     // Background aquatique
-    background: linear-gradient(180deg, rgba(84, 101, 119, 1) 0%, rgba(20, 35, 56, 1) 30%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, rgb(162, 188, 216) 0%, rgba(20, 35, 56, 1) 50%, rgba(0, 0, 0, 1) 100%);
+
+    .titre-page_privat {
+        font-family: "Millionaire-Roman";
+        color: $beige;
+        font-size: $h1-size;
+        mix-blend-mode: overlay;
+        z-index: 90;
+    }
 }
 
 /* Footer */
@@ -283,3 +317,67 @@ body {
         text-decoration: none;
     }
 }
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: $noir;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $beige;
+    border-radius: 50px;
+    //border: 2px solid rgba(247, 239, 231, 0.5);
+}
+
+/* Menu hover effect
+
+.container-menu {
+    font-family: "Millionaire-Roman";
+
+    .sub-menu .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .link_menu {
+
+            &:hover {
+                position: fixed;
+
+                .image {
+                    display: block;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    background-position: center;
+                    background-size: 100%;
+                    opacity: 1;
+                    z-index: 999;
+                }
+            }
+        }
+
+        .image {
+            display: none;
+            position: absolute;
+            pointer-events: none;
+            //top: 50%;
+            //left: 50%;
+            //transform: translate(-50%, -50%);
+            height: 60vh;
+            width: auto;
+            z-index: -9999;
+            transition: opacity;
+            transition-duration: 2s;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+} */

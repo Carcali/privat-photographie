@@ -26,6 +26,11 @@
 .section-img_privat {
     height: 60vh;
     width: auto;
+
+    &:hover {
+        mix-blend-mode: luminosity 0.8;
+        transition: 1200ms;
+    }
 }
 
 .div-description-accueil_privat {

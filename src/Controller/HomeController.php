@@ -34,13 +34,15 @@ class HomeController extends AbstractController
     }
 
     // Projet type
-    #[Route('/projets/{id}', name: 'projet_show', methods: ['GET'])]
-    public function show(Projet $projet, int $id): Response
+    #[Route('/projets/projet-type', name: 'projet-type')]
+    public function show(): Response
     {
-        $projets = $projetRepo->findBy();
+        return $this->render('./projet-type.html.twig');
+    }
 
-        return $this->render('./projet-type.html.twig', [
-            'projetShow' => $projet,
-        ]);
+    #[Route('/menu', name: 'menu')]
+    public function menu(): Response
+    {
+        return $this->render('./menu.html.twig');
     }
 }
