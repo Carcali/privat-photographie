@@ -11,7 +11,7 @@ Mon choix s'est orienté sur un portfolio lié à ma passion pour la photographi
 * Dessiner le wireframe
 * Créer un modèle de base de données
 * Écrire les user stories
-* Que le site soit fonctionnel et responsive
+* Que le site soit fonctionnel
 
 ## Technologies utilisées
 
