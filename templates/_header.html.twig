@@ -1,0 +1,61 @@
+<header class="uk-flex uk-flex-center">
+            <nav class="nav_privat">
+                <a class="button-menu uk-text-uppercase uk-text-decoration-none uk-position-large uk-position-top-left" href="#modal-full" uk-toggle>Menu</a>
+                <img src="{{ asset('build/images/logo-privat-beige.svg') }}" id="logo-beige" class="logo-menu uk-position-large uk-position-top-center">
+                {# <img src="{{ asset('build/images/logo-privat-noir.svg') }}" id="logo-noir" class="logo-menu"> #}
+                {# Darkmode toggle #}
+                    <div class="toggleContainer uk-position-large uk-position-top-right">
+                        <input id="checkbox" type = "checkbox" value = "off">
+                    </div>
+                {# Fin du darkmode #}
+            </nav>
+            {# Modal #}
+            <div id="modal-full" class="uk-modal-full" uk-modal>
+                <div class="menu-fullwidth_privat uk-modal-dialog">
+                    <div class="uk-flex uk-flex-center">
+                        <img src="{{ asset('build/images/logo-privat-beige.svg') }}" id="logo-beige" class="logo-modal_privat uk-position-large uk-position-top-center">
+                        <div class="nav-modal_privat">
+                            <button class="button-close_privat uk-text-uppercase uk-text-decoration-none uk-modal-close-full uk-position-large uk-position-top-left" uk-close>Fermer</button>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="div-liens-menu_privat" uk-height-viewport>
+                            <a href="{{ path('accueil') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Accueil</a>
+                            <a href="{{ path('projets') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Projets</a>
+                            <a href="{{ path('a-propos') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">À propos</a>
+                            <a href="{{ path('contact') }}" class="liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">Contact</a>
+                        </div>
+                    </div>
+            </div>
+            {# Fin du modal #}
+        </header>
+<!--<section class="container-menu uk-modal-full" id="modal-full" uk-modal>
+<div class="menu-fullwidth_privat uk-modal-dialog">
+    <div class="uk-flex uk-flex-center">
+        <img src="{{ asset('build/images/logo-privat-beige.svg') }}" id="logo-beige" class="logo-modal_privat uk-position-large uk-position-top-center">
+        <div class="nav-modal_privat">
+            <button class="button-close_privat uk-text-uppercase uk-text-decoration-none uk-modal-close-full uk-position-large uk-position-top-left" uk-close>Fermer</button>
+        </div>
+    </div>
+  <div class="sub-menu div-liens-menu_privat uk-flex uk-flex-center uk-flex-middle uk-position-center">
+    <div class="item">
+      <a class="link_menu liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">
+        Accueil
+        <div id="parallax" class="image" style="background-image: url('{{ asset('build/images/accueil/toulon-2022-chapelle-notre-dame-du-cap-falcon-privat-photographie-1.jpg') }}');"></div>
+      </a>
+    </div>
+    <div class="item">
+      <a class="link_menu liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">
+        Projets
+        <div id="parallax2" class="image" style="background-image: url('{{ asset('build/images/projets-privat-photographie.jpg') }}');"></div>
+      </a>
+    </div>
+    <div class="item">
+      <a class="link_menu liens-menu_privat uk-text-uppercase uk-text-center uk-text-decoration-none">
+        Contact
+        <div id="parallax3" class="image" style="background-image: url('{{ asset('build/images/contact-cafe-privat-photographie.jpg') }}');"></div>
+      </a>
+    </div>
+  </div>
+</div>
+</section>-->
